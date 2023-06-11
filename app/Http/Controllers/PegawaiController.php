@@ -7,6 +7,10 @@ use App\Models\Pegawai;
 use App\Models\Divisi;
 use App\Models\Jabatan;
 use DB;
+use PDF;
+use App\Exports\PegawaiExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\PegawaiImport;
 
 class PegawaiController extends Controller
 {
@@ -178,6 +182,34 @@ class PegawaiController extends Controller
     {
         //menambahkan tombol hapus pada pegawai
         DB::table('pegawai')->where('id', $id)->delete();
+        return redirect('admin/pegawai');
+    }
+    //ini adalah fungsi percontohan untuk export pdf
+    public function generatePDF(){
+        $data = [
+            'title' => 'Welcome to ItSolutionStuff.com',
+            'date' => date('m/d/Y')
+        ];
+          
+        $pdf = PDF::loadView('admin.pegawai.myPDF', $data);
+    
+        return $pdf->download('testdownload.pdf');
+    }
+    public function pegawaiPDF(){
+        $pegawai = Pegawai::all();
+        
+        $pdf = PDF::loadView('admin.pegawai.pegawaiPDF', ['pegawai' => $pegawai])->setPaper('a4', 'landscape');
+        // return $pdf->download('data_pegawai.pdf');
+        return $pdf->stream();
+    }
+    public function exportExcel(){
+        return Excel::download(new PegawaiExport, 'pegawai.xlsx');
+    }
+    public function importExcel(Request $request){
+        $file = $request->file('file');
+        $nama_file = rand().$file->getClientOriginalName();
+        $file->move('file_excel', $nama_file);
+        Excel::import(new PegawaiImport, public_path('/file_excel/'.$nama_file));
         return redirect('admin/pegawai');
     }
 }

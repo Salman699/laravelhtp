@@ -52,6 +52,10 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/show/{id}', [PegawaiController::class, 'show']);
 Route::get('/pegawai/delete/{id}', [PegawaiController::class, 'destroy']);
+Route::get('generate-pdf', [PegawaiController::class, 'generatePDF']);
+Route::get('/pegawai/pegawaiPDF', [PegawaiController::class, 'pegawaiPDF']);
+Route::get('/pegawai/exportexcel/', [PegawaiController::class, 'exportExcel']);
+Route::post('/pegawai/importexcel', [PegawaiController::class, 'importExcel']);
 
 
 //ini adalah route untuk divisi
