@@ -169,8 +169,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+<<<<<<< HEAD
         Barryvdh\DomPDF\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
     ])->toArray(),
 
     /*
@@ -187,8 +190,11 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
+<<<<<<< HEAD
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
     ])->toArray(),
 
 ];

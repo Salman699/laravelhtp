@@ -52,10 +52,13 @@ Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/show/{id}', [PegawaiController::class, 'show']);
 Route::get('/pegawai/delete/{id}', [PegawaiController::class, 'destroy']);
+<<<<<<< HEAD
 Route::get('generate-pdf', [PegawaiController::class, 'generatePDF']);
 Route::get('/pegawai/pegawaiPDF', [PegawaiController::class, 'pegawaiPDF']);
 Route::get('/pegawai/exportexcel/', [PegawaiController::class, 'exportExcel']);
 Route::post('/pegawai/importexcel', [PegawaiController::class, 'importExcel']);
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
 
 
 //ini adalah route untuk divisi

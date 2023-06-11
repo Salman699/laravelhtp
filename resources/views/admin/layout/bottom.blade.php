@@ -20,6 +20,7 @@
         <script src="{{asset('admin/assets/demo/chart-pie-demo.js')}}"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('admin/js/datatables-simple-demo.js')}}"></script>
+<<<<<<< HEAD
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
@@ -43,5 +44,7 @@
         } );
         </script>
 
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
     </body>
 </html>

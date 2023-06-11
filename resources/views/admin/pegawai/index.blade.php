@@ -1,6 +1,7 @@
 @extends('admin.layout.appadmin')
 
 @section('content')
+<<<<<<< HEAD
 <!-- modal -->
 <!-- Button trigger modal -->
 
@@ -40,6 +41,8 @@
 <!-- end modal -->
 
 
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
                         <h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -61,6 +64,7 @@
                                 <a href="{{url('admin/pegawai/create')}}" class="btn btn-primary btn-sm"> Tambah</a>
                                 
                             </div>
+<<<<<<< HEAD
                             <div class="card-header">
                             <a href="{{url('admin/pegawai/pegawaiPDF')}}" class="btn btn-danger btn-sm" target="_blank"> Export To PDF</a>
                             <a href="{{url('admin/pegawai/exportexcel')}}" class="btn btn-success btn-sm" > Export To EXCEL</a>
@@ -68,6 +72,8 @@
                                Import To Excel
                             </button>
                             </div>
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
 
                             <div class="card-body">
                                 <table id="datatablesSimple">

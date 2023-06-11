@@ -23,10 +23,16 @@
                                 <a href="{{url('admin/divisi/create')}}" class="btn btn-primary btn-sm"> Tambah</a>
                                 
                             </div>
+<<<<<<< HEAD
                             
 
                             <div class="card-body">
                                 <table id="example" >
+=======
+
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -106,5 +112,8 @@
 
 @endsection
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
                

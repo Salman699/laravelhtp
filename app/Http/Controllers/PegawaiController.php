@@ -7,10 +7,13 @@ use App\Models\Pegawai;
 use App\Models\Divisi;
 use App\Models\Jabatan;
 use DB;
+<<<<<<< HEAD
 use PDF;
 use App\Exports\PegawaiExport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\PegawaiImport;
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
 
 class PegawaiController extends Controller
 {
@@ -184,6 +187,7 @@ class PegawaiController extends Controller
         DB::table('pegawai')->where('id', $id)->delete();
         return redirect('admin/pegawai');
     }
+<<<<<<< HEAD
     //ini adalah fungsi percontohan untuk export pdf
     public function generatePDF(){
         $data = [
@@ -212,4 +216,6 @@ class PegawaiController extends Controller
         Excel::import(new PegawaiImport, public_path('/file_excel/'.$nama_file));
         return redirect('admin/pegawai');
     }
+=======
+>>>>>>> 22ae4da5d8a51c80f8011ee009a4159caba2210c
 }
